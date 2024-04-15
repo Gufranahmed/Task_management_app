@@ -5,7 +5,7 @@ import TaskFilters from "./TaskFilters";
 import TaskForm from "./TaskForm";
 import LogoutButton from "../userAuthentication/LogoutButton";
 import { useSelector, useDispatch } from "react-redux";
-import { addTask, markTaskAsDone, markTaskAsInProgress,deleteTask} from "../../redux/slices/tasksSlice"; // Update import statement
+import { addTask, markTaskAsDone, markTaskAsInProgress,deleteTask} from "../../redux/slices/tasksSlice"; 
 import SearchBar from "./SearchBar";
 
 function Todo({ handleLogout }) {
@@ -39,7 +39,7 @@ function Todo({ handleLogout }) {
         id: tasks.length + 1,
         title: newTaskTitle,
         description: newTaskDescription,
-        status: "To Do", // Set initial status to "To Do"
+        status: "To Do", 
         priority: priority.value,
       })
     );
@@ -63,11 +63,11 @@ function Todo({ handleLogout }) {
     dispatch(markTaskAsDone(id));
   };
 
-  const handleMarkTaskAsInProgress = (id) => { // Function to mark task as "In Progress"
+  const handleMarkTaskAsInProgress = (id) => { 
     dispatch(markTaskAsInProgress(id));
   };
   const handleDeleteTask = (id) => {
-    dispatch(deleteTask(id)); // Dispatch action to delete task
+    dispatch(deleteTask(id)); 
     <img src={DeleteIcon} alt="delete" />
   };
 
@@ -113,8 +113,8 @@ function Todo({ handleLogout }) {
             description={task.description}
             status={task.status}
             onComplete={() => handleMarkTaskAsDone(task.id)}
-            onInProgress={() => handleMarkTaskAsInProgress(task.id)} // Add function for marking task as "In Progress"
-            onDelete={() => handleDeleteTask(task.id)} // Pass delete function
+            onInProgress={() => handleMarkTaskAsInProgress(task.id)} 
+            onDelete={() => handleDeleteTask(task.id)} 
             showDetails={toggleTaskDetails}
             isExpanded={task.id === expandedTaskId}
             priority={task.priority}

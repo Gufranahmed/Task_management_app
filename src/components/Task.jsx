@@ -13,7 +13,7 @@ function Task({ id, title, description, status, onComplete, onInProgress, onDele
         <div>
           <button onClick={toggleExpansion}>{isExpanded ? "Close" : "View"}</button>
           &nbsp;&nbsp;&nbsp;
-          <button onClick={() => onDelete(id)}>Delete</button> {/* Add delete button */}
+          <button onClick={() => onDelete(id)}>Delete</button> 
         </div>
       </div>
       {isExpanded && (
@@ -23,7 +23,7 @@ function Task({ id, title, description, status, onComplete, onInProgress, onDele
           <span>Priority: {priority}</span>
           {status === "To Do" && (
             <>
-              <button onClick={() => onInProgress(id)}>Start</button> {/* Button for transitioning to "In Progress" */}
+              <button onClick={() => onInProgress(id)}>Start</button> 
             </>
           )}
           {status === "In Progress" && (

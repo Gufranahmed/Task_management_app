@@ -39,7 +39,7 @@ const tasksSlice = createSlice({
       return state.filter((task) => task.id !== action.payload);
    
     },
-    markTaskAsInProgress: (state, action) => { // Define reducer for marking task as "In Progress"
+    markTaskAsInProgress: (state, action) => { 
       const task = state.find((task) => task.id === action.payload);
       if (task) {
         task.status = "In Progress";

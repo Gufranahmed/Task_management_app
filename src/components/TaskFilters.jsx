@@ -8,7 +8,7 @@ function TaskFilters({ filterTasks }) {
         <button onClick={() => filterTasks("To Do")}>To Do</button>
       </div>
       <div className="button-group">
-        <button onClick={() => filterTasks("In Progress")}>In Progress</button> {/* Uncommented button for "In Progress" */}
+        <button onClick={() => filterTasks("In Progress")}>In Progress</button> 
         <button onClick={() => filterTasks("Done")}>Done</button>
       </div>
     </div>
